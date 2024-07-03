@@ -1,0 +1,153 @@
+:root {
+    --main-color: #2d2e81;
+    --heading-color: #232331;
+    --text-color: #1E1E1E;
+    --white-color: #fff;
+    --black-color: #000;
+    --main-font: Roboto-Regular;
+    --heading-font: Roboto-Regular;
+    --button-font: Roboto-Regular;
+  }
+  @font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.woff);
+  }
+
+  @font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.woff);
+  }
+@media (max-width:1900px){
+    .about_sec{height: 70vh;}
+}
+
+@media (min-width:2000px){
+    .small_img {
+        height: 447px;
+    }
+    .about_text p, .about_text h5{
+        font-size: 35px;
+    }
+    .ashok {
+        width: 160px;
+    }
+    .logo a {
+        width: 228px;
+    }
+}
+
+@media (max-width:1920px){
+    .big_img {
+        height: 500px;
+    }
+    .small_img{
+        height: 200px;
+    }
+    .big_img {
+        height: 660px;
+    }
+}
+
+@media (max-width:1800px){
+    .about_sec{height: 60vh;}
+    .ashok {
+        width: 50px;
+    }
+    .ps_add h3{
+        font-size: 20px;
+    }
+    .ps_add h4{
+        font-size: 16px;
+    }
+    .logo a{
+        width: 110px;
+    }
+    .about_text h5 {
+        font-size: 16px;
+    }
+    .about_text p{
+        font-size: 14px;
+    }
+    .small_img {
+        height: 160px;
+    }
+    .big_img {
+        height: 500px;
+    }
+}
+
+@media (max-width:1440px){
+    .about_sec{height: 60vh;}
+    .ashok {
+        width: 50px;
+    }
+    .ps_add h3{
+        font-size: 20px;
+    }
+    .ps_add h4{
+        font-size: 16px;
+    }
+    .logo a{
+        width: 110px;
+    }
+    .about_text h5 {
+        font-size: 16px;
+    }
+    .about_text p{
+        font-size: 14px;
+    }
+    .small_img {
+        height: 160px;
+    }
+    .big_img {
+        height: 500px;
+    }
+}
+@media (max-width:1366px){
+    .about_sec{height: 60vh;}
+    .heading_hp h2 {
+        font-size: 23px;
+    }
+    .heading_hp p {
+        font-size: 19px;
+        line-height: 31px;
+    }
+}
+
+@media (max-width:1280px){
+    .date_text {
+        font-size: 20px;
+    }
+    .date_text img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width:1024px){
+    .about_text h5 {
+        font-size: 13px;
+    }
+    .about_text p {
+        font-size: 11px;
+    }
+    .small_img {
+        height: 151px;
+    }
+
+}
+@media (max-width:991px){
+
+}
+
+@media (max-width:768px){
+
+
+}
+
+@media (max-width:767px){
+
+}
+@media (max-width:375.98px){
+
+}
