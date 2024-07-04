@@ -24,7 +24,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $criminals = User::Role('CRIMINAL')->orderBy('name', 'desc')->paginate(15);
+        $criminals = User::Role('CRIMINAL')->orderBy('id', 'desc')->paginate(15);
         return view('admin.criminal.list')->with(compact('criminals'));
     }
 
@@ -51,6 +51,7 @@ class CustomerController extends Controller
             'policestation' => 'required',
             'case_no' => 'required',
             'under_section' => 'required',
+            'arrest_date' => 'required',
             'address' => 'required',
             'profile_picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -61,13 +62,14 @@ class CustomerController extends Controller
         $data->case_no = $request->case_no;
         $data->under_section = $request->under_section;
         $data->address = $request->address;
+        $data->arrest_date = $request->arrest_date;
         if ($request->hasFile('profile_picture')) {
             $data->profile_picture = $this->imageUpload($request->file('profile_picture'), 'criminals');
         }
         $data->save();
         $data->assignRole('CRIMINAL');
 
-        return redirect()->route('criminals.index')->with('message', 'Criminal created successfully.');
+        return redirect()->route('criminals.index')->with('message', ' created successfully.');
     }
 
     /**
@@ -107,6 +109,7 @@ class CustomerController extends Controller
             'case_no' => 'required',
             'under_section' => 'required',
             'address' => 'required',
+            'arrest_date' => 'required',
         ]);
 
         $data = User::findOrFail($id);
@@ -115,14 +118,15 @@ class CustomerController extends Controller
         $data->case_no = $request->case_no;
         $data->under_section = $request->under_section;
         $data->address = $request->address;
+        $data->arrest_date = $request->arrest_date;
         if ($request->hasFile('profile_picture')) {
             $data->profile_picture = $this->imageUpload($request->file('profile_picture'), 'criminals');
         }
         $data->save();
         if ($request->page) {
-            return redirect()->route('criminals.index', ['page' => $request->page])->with('message', 'Criminal updated successfully.');
+            return redirect()->route('criminals.index', ['page' => $request->page])->with('message', 'Suspect updated successfully.');
         }
-        return redirect()->route('criminals.index')->with('message', 'Criminal updated successfully.');
+        return redirect()->route('criminals.index')->with('message', 'Suspect updated successfully.');
     }
 
     /**
@@ -148,7 +152,7 @@ class CustomerController extends Controller
     {
         $user = User::findOrFail($id);
         $user->delete();
-        return redirect()->route('criminals.index')->with('error', 'Criminal has been deleted successfully.');
+        return redirect()->route('criminals.index')->with('error', 'Suspect has been deleted successfully.');
     }
 
     public function fetchData(Request $request)
@@ -164,6 +168,7 @@ class CustomerController extends Controller
                 ->orWhere('case_no', 'like', '%' . $query . '%')
                 ->orWhere('under_section', 'like', '%' . $query . '%')
                 ->orWhere('address', 'like', '%' . $query . '%')
+                // arrest date search 03-07-2024
                 ->orderBy($sort_by, $sort_type)
                 ->Role('CRIMINAL')
                 ->paginate($request->show);

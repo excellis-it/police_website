@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="{{asset('admin_assets/css/phosphor-icons.css')}}">
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="{{asset('admin_assets/css/app.min.css')}}" />
     <link rel="stylesheet" href="{{asset('admin_assets/css/custom.css')}}" />
@@ -18,9 +18,10 @@
 
     <link rel="stylesheet" href="{{asset('admin_assets/css/morris.css')}}">
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+        href="{{asset('admin_assets/css/toastr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin_assets/css/jquery.dataTables.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admin_assets/css/sweetalert2.min.css')}}">
+    {{-- <link rel="stylesheet" href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css"> --}}
     @stack('styles')
     <style>
         .error {
@@ -68,14 +69,11 @@
     <script src="{{asset('admin_assets/js/app.min.js')}}"></script>
     <script src="{{asset('admin_assets/js/scripts.js')}}" async=""></script>
     <script src="{{asset('admin_assets/js/jquery-ui.min.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-     {{-- trippy cdn link --}}
- <script src="https://unpkg.com/popper.js@1"></script>
- <script src="https://unpkg.com/tippy.js@5"></script>
+
+    <script src="{{asset('admin_assets/js/toastr.min.js')}}"></script>
+    <script src="{{asset('admin_assets/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('admin_assets/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('admin_assets/js/sweetalert2.all.min.js')}}"></script>
  {{-- trippy --}}
  <script>
      tippy('[data-tippy-content]', {

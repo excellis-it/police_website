@@ -12,7 +12,7 @@ class AuthController extends Controller
     public function login()
     {
         if (Auth::check() && Auth::user()->hasRole('ADMIN')) {
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('criminals.index');
         } else {
             return view('admin.auth.login');
         }

@@ -78,8 +78,8 @@
                                                                 <div class="about_text">
                                                                     <h5>Name :- {{ $user->name }}</h5>
                                                                     <p>Case No :- {{ $user->case_no }}</p>
-                                                                    <p>Date :-
-                                                                        {{ date('d.m.Y', strtotime($user->created_at)) }}
+                                                                    <p>Arrest Date :-
+                                                                        {{ $user->arrest_date ? date('d.m.Y', strtotime($user->arrest_date)) : '' }}
                                                                     </p>
                                                                     <p>Under Section :- {{ $user->under_section }}</p>
                                                                 </div>
@@ -120,8 +120,8 @@
                                                             <div class="about_text_inr heading_hp text_white">
                                                                 <h2>Name :- {{ $user->name }}</h2>
                                                                 <p><span>Case No :-</span> {{ $user->case_no }}</p>
-                                                                <p><span>Date :-</span>
-                                                                    {{ date('d.m.Y', strtotime($user->created_at)) }}
+                                                                <p><span>Arrest Date :-</span>
+                                                                    {{ $user->arrest_date ? date('d.m.Y', strtotime($user->arrest_date)) : '' }}
                                                                 </p>
                                                                 <p><span>Under Section :-</span>
                                                                     {{ $user->under_section }}</p>
@@ -176,6 +176,32 @@
             }, {{ isset($slider_times[1]['duration']) ? ($slider_times[1]['duration'] * 1000) -600 : 3000 }});
         }
     });
+    @if(count($users) <= 9)
+    if ($('#carouselExample1 .carousel-inner .carousel-item:last').hasClass('active')) {
+           setTimeout(() => {
+            $('#one-details').show();
+            $('#date-not').hide();
+            $('#all-deails').hide();
+            // remove the active class from the last slide
+            $('#carouselExample1 .carousel-inner .carousel-item:last').removeClass('active');
+            // add the active class to the first slide
+            $('#carouselExample .carousel-inner .carousel-item:first').addClass('active');
+           }, {{ isset($slider_times[0]['duration']) ? ($slider_times[0]['duration'] * 1000) -600 : 3000 }});
+        }
+    @endif
+    @if(count($users) <= 1)
+    if ($('#carouselExample .carousel-inner .carousel-item:last').hasClass('active')) {
+            setTimeout(() => {
+                $('#one-details').hide();
+                $('#date-not').show();
+                $('#all-deails').show();
+                // remove the active class from the last slide
+                $('#carouselExample .carousel-inner .carousel-item:last').removeClass('active');
+                // add the active class to the first slide
+                $('#carouselExample1 .carousel-inner .carousel-item:first').addClass('active');
+            }, {{ isset($slider_times[1]['duration']) ? ($slider_times[1]['duration'] * 1000) -600 : 3000 }});
+        }
+    @endif
 </script>
 
 </html>

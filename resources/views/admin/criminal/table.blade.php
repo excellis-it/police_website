@@ -10,6 +10,9 @@
             <td>{{ $criminal->under_section }}</td>
             <td>{{ $criminal->address }}</td>
             <td>{{date('d-m-Y', strtotime($criminal->created_at))}}</td>
+            <td>
+                {{ $criminal->arrest_date ? date('d-m-Y', strtotime($criminal->arrest_date)) : ''}}
+            </td>
             {{-- <td>
                 <div class="button-switch">
                     <input type="checkbox" id="switch-orange" class="switch toggle-class" data-id="{{ $criminal['id'] }}"
@@ -34,7 +37,7 @@
     @endforeach
     {{-- pagination --}}
     <tr>
-        <td colspan="8">
+        <td colspan="9">
             <div class="d-flex justify-content-center">
                 {!! $criminals->links() !!}
             </div>
@@ -42,6 +45,6 @@
     </tr>
     @else
     <tr>
-        <td colspan="8" class="text-center">No Data Found</td>
+        <td colspan="9" class="text-center">No Data Found</td>
     </tr>
 @endif

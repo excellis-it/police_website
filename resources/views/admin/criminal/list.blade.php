@@ -64,7 +64,10 @@
                                 {{-- address --}}
                                 <th class="sorting" data-tippy-content="Sort by Address" data-sorting_type="desc"
                                 data-column_name="address" style="cursor: pointer"> Address<span id="address_icon"><i class="ph ph-caret-down"></i></span></th>
-                                <th>Date</th>
+                                <th>Entry Date</th>
+                                <th>
+                                    Arrest Date
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -74,7 +77,7 @@
                     </table>
                     <input type="hidden" name="hidden_page" id="hidden_page" value="1" />
                     <input type="hidden" name="hidden_column_name" id="hidden_column_name" value="id" />
-                    <input type="hidden" name="hidden_sort_type" id="hidden_sort_type" value="asc" />
+                    <input type="hidden" name="hidden_sort_type" id="hidden_sort_type" value="desc" />
                 </div>
             </div>
 
