@@ -24,7 +24,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $criminals = User::Role('CRIMINAL')->orderBy('id', 'desc')->paginate(15);
+        $criminals = User::Role('CRIMINAL')->orderBy('id', 'desc')->paginate(10);
         return view('admin.criminal.list')->with(compact('criminals'));
     }
 

@@ -51,22 +51,30 @@
                                     Sl No.
                                 </th>
                                 <th class="sorting" data-tippy-content="Sort by Name" data-sorting_type="desc"
-                                data-column_name="name" style="cursor: pointer"> Name<span id="name_icon"><i class="ph ph-caret-down"></i></span></th>
-                               {{-- policestation --}}
+                                    data-column_name="name" style="cursor: pointer"> Name<span id="name_icon"><i
+                                            class="ph ph-caret-down"></i></span></th>
+                                {{-- policestation --}}
                                 <th class="sorting" data-tippy-content="Sort by Police Station" data-sorting_type="desc"
-                                data-column_name="policestation" style="cursor: pointer"> Police Station<span id="policestation_icon"><i class="ph ph-caret-down"></i></span></th>
+                                    data-column_name="policestation" style="cursor: pointer"> Police Station<span
+                                        id="policestation_icon"><i class="ph ph-caret-down"></i></span></th>
                                 {{-- case_no --}}
                                 <th class="sorting" data-tippy-content="Sort by Case No" data-sorting_type="desc"
-                                data-column_name="case_no" style="cursor: pointer"> Case No<span id="case_no_icon"><i class="ph ph-caret-down"></i></span></th>
+                                    data-column_name="case_no" style="cursor: pointer"> Case No<span id="case_no_icon"><i
+                                            class="ph ph-caret-down"></i></span></th>
                                 {{-- under_section_icon --}}
                                 <th class="sorting" data-tippy-content="Sort by Under Section" data-sorting_type="desc"
-                                data-column_name="under_section" style="cursor: pointer"> Under Section<span id="under_section_icon"><i class="ph ph-caret-down"></i></span></th>
+                                    data-column_name="under_section" style="cursor: pointer"> Under Section<span
+                                        id="under_section_icon"><i class="ph ph-caret-down"></i></span></th>
                                 {{-- address --}}
                                 <th class="sorting" data-tippy-content="Sort by Address" data-sorting_type="desc"
-                                data-column_name="address" style="cursor: pointer"> Address<span id="address_icon"><i class="ph ph-caret-down"></i></span></th>
+                                    data-column_name="address" style="cursor: pointer"> Address<span id="address_icon"><i
+                                            class="ph ph-caret-down"></i></span></th>
                                 <th>Entry Date</th>
                                 <th>
                                     Arrest Date
+                                </th>
+                                <th>
+                                    Is Released
                                 </th>
                             </tr>
                         </thead>
@@ -109,25 +117,27 @@
         });
     </script>
     <script>
-        $('.toggle-class').change(function() {
-            var status = $(this).prop('checked') == true ? 1 : 0;
-            var user_id = $(this).data('id');
+        $(document).ready(function() {
+            $(document).on('change', '.toggle-class', function() {
+                var status = $(this).prop('checked') == true ? 1 : 0;
+                var user_id = $(this).data('id');
 
-            $.ajax({
-                type: "GET",
-                dataType: "json",
-                url: '{{ route('criminals.change-status') }}',
-                data: {
-                    'status': status,
-                    'user_id': user_id
-                },
-                success: function(resp) {
-                    console.log(resp.success)
-                }
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: '{{ route('criminals.change-status') }}',
+                    data: {
+                        'status': status,
+                        'user_id': user_id
+                    },
+                    success: function(resp) {
+                        console.log(resp.success)
+                    }
+                });
             });
         });
     </script>
-     <script>
+    <script>
         $(document).ready(function() {
 
             function clear_icon() {
@@ -169,7 +179,7 @@
                 var sort_type = $('#hidden_sort_type').val();
                 var page = $('#hidden_page').val();
                 var show_item = $('#show-item').val();
-                fetch_data(page, sort_type, column_name, query , show_item);
+                fetch_data(page, sort_type, column_name, query, show_item);
             });
 
             $(document).on('click', '.sorting', function() {

@@ -13,14 +13,14 @@
             <td>
                 {{ $criminal->arrest_date ? date('d-m-Y', strtotime($criminal->arrest_date)) : ''}}
             </td>
-            {{-- <td>
+            <td>
                 <div class="button-switch">
                     <input type="checkbox" id="switch-orange" class="switch toggle-class" data-id="{{ $criminal['id'] }}"
                         {{ $criminal['status'] ? 'checked' : '' }} />
                     <label for="switch-orange" class="lbl-off"></label>
                     <label for="switch-orange" class="lbl-on"></label>
                 </div>
-            </td> --}}
+            </td>
             <td>
                 <div class="edit-1 d-flex align-items-center justify-content-center">
                     <a title="Edit Customer" href="{{ route('criminals.edit', $criminal->id) . (request()->page ? '?page=' . request()->page : '') }}">
