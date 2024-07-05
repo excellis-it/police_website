@@ -38,7 +38,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('/app/public'),
-            'url' => env('APP_URL').'/police_new/public/storage',
+            'url' => env('APP_URL').'/bidhannagar_police/public/storage',
             'visibility' => 'public',
         ],
 

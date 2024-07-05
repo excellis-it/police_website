@@ -86,7 +86,7 @@
                                                                     <div class="about_text">
                                                                         <h5>Name :- {{ $user->name }}</h5>
                                                                         <p>Case No :- {{ $user->case_no }}</p>
-                                                                        <p>Date :-
+                                                                        <p>Arrest Date :-
                                                                             {{ $user->arrest_date ? date('d.m.Y', strtotime($user->arrest_date)) : '' }}
                                                                         </p>
                                                                         <p>Under Section :- {{ $user->under_section }}
@@ -110,7 +110,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -132,7 +132,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -154,7 +154,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -176,7 +176,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -198,7 +198,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -220,7 +220,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -242,7 +242,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -264,7 +264,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -286,7 +286,7 @@
                                                             <div class="about_text">
                                                                 <h5>Name :- Lorem ipsum dolor</h5>
                                                                 <p>Case No :- 2861</p>
-                                                                <p>Date :- 02.07.2024</p>
+                                                                <p>Arrest Date :- 02.07.2024</p>
                                                                 <p>Under Section :- 261, 536, 333</p>
                                                             </div>
                                                         </div>
@@ -337,7 +337,7 @@
                                                                     <div class="about_text">
                                                                         <h5>Name :- {{ $user->name }}</h5>
                                                                         <p>Case No :- {{ $user->case_no }}</p>
-                                                                        <p>Date :-
+                                                                        <p>Arrest Date :-
                                                                             {{ $user->arrest_date ? date('d.m.Y', strtotime($user->arrest_date)) : '' }}
                                                                         </p>
                                                                         <p>Under Section :- {{ $user->under_section }}
@@ -390,7 +390,7 @@
                                                                 <div class="about_text_inr heading_hp text_white">
                                                                     <h2>Name :- {{ $user->name }}</h2>
                                                                     <p><span>Case No :-</span> {{ $user->case_no }}</p>
-                                                                    <p><span>Date :-</span>
+                                                                    <p><span>Arrest Date :-</span>
                                                                         {{ $user->arrest_date ? date('d.m.Y', strtotime($user->arrest_date)) : '' }}
                                                                     </p>
                                                                     <p><span>Under Section :-</span>
@@ -421,7 +421,7 @@
                                                             <div class="about_text_inr heading_hp text_white">
                                                                 <h2>Name :- Lorem ipsum dolor</h2>
                                                                 <p><span>Case No :-</span> 2861</p>
-                                                                <p><span>Date :-</span> 02.07.2024</p>
+                                                                <p><span>Arrest Date :-</span> 02.07.2024</p>
                                                                 <p><span>Under Section :-</span> 261, 536, 333</p>
                                                                 <p><span>Address :-</span> DN - 57, Salt Lake Bypass, DN
                                                                     Block, Sector V, Bidhannagar,
@@ -461,7 +461,7 @@
                                                                 <div class="about_text_inr heading_hp text_white">
                                                                     <h2>Name :- {{ $user->name }}</h2>
                                                                     <p><span>Case No :-</span> {{ $user->case_no }}</p>
-                                                                    <p><span>Date :-</span>
+                                                                    <p><span>Arrest Date :-</span>
                                                                         {{ $user->arrest_date ? date('d.m.Y', strtotime($user->arrest_date)) : '' }}
                                                                     </p>
                                                                     <p><span>Under Section :-</span>

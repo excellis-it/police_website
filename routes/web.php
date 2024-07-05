@@ -25,12 +25,12 @@ use Illuminate\Support\Facades\Artisan;
 
 // Clear cache
 Route::get('clear', function () {
-    Artisan::call('optimize:clear');    
+    Artisan::call('optimize:clear');
     return "Optimize clear has been successfully";
 });
 
 // storage
-Route::get('clear', function () {
+Route::get('storage-link', function () {
     Artisan::call('storage:link');
     return "Link has been created";
 });
