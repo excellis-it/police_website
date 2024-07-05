@@ -50,13 +50,13 @@
         <section class="about_sec">
             <div class="container-fluid">
                 <div class="date_text" id="date-not">
-                    <img src="assets/images/calender.png" alt="" />
+                    <img src="{{asset('assets/images/calender.png')}}" alt="" />
                     {{ date('d.m.Y', strtotime(now())) }}
                 </div>
                 <div id="all-deails">
                     @if (count($users) > 0)
                         @if (count($users) <= 9)
-                            <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
+                            <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
                                 <div class="carousel-inner">
                                     {{-- chunk 9 --}}
                                     @foreach ($users->chunk(9) as $key => $chunk)
@@ -307,7 +307,7 @@
 
                             </div>
                         @else
-                            <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
+                            <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
                                 <div class="carousel-inner">
                                     {{-- chunk 9 --}}
                                     @foreach ($users->chunk(9) as $key => $chunk)
@@ -361,7 +361,7 @@
                 <div class=" mt-4" id="one-details" style="display: none">
                     @if (count($users) > 0)
 
-                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
                             <div class="carousel-inner">
                                 @if (count($users) <= 1)
                                     @foreach ($users as $key => $user)
@@ -666,5 +666,4 @@ if(totalSlides == activeSlide) {
 }
 }*/
 </script>
-
 </html>
