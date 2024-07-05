@@ -112,6 +112,18 @@
         font-size: 19px;
         line-height: 31px;
     }
+     .small_img {
+        height: 120px;
+    }
+    .big_img {
+        height: 410px;
+    }
+    .about_text p {
+        margin-bottom: 0px;
+    }
+    .about_text {
+        padding: 7px 0px 7px 0px;
+    }
 }
 
 @media (max-width:1280px){
@@ -130,9 +142,6 @@
     }
     .about_text p {
         font-size: 11px;
-    }
-    .small_img {
-        height: 151px;
     }
 
 }

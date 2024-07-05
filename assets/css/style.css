@@ -207,11 +207,12 @@
   .big_img{
     width: 100%;
     height: 100%;
+    overflow:hidden;
   }
   .big_img img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
+    vertical-align:top;
   }
   .about_text_inr p span{
     font-weight: 600;
